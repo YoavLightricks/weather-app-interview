@@ -1,0 +1,20 @@
+{{page-title "A Forecast"}}
+{{set-body-class "city"}}
+<div class="single-city-title">
+   <h1>{{@model.city.name}}</h1> 
+</div>
+
+<div class="all-forcasts">
+    {{#each @model.dailyForecasts as |day index|}}
+    <SingleDate @singleDay={{day}} @index={{index}}/>
+    {{/each}}
+</div>
+
+<div class="change-city-input">
+    <input type="text" placeholder="Enter a city" class="change-city-input-field" value={{this.singleCity}} {{on "change" this.updateValue}}/>
+    <LinkTo @route="city" @model={{this.singleCity}}>Change City</LinkTo>
+</div>
+
+{{#if @model.error}}
+  <p>{{@model.error}}</p>
+{{/if}}

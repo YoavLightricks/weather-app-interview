@@ -1,0 +1,6 @@
+<div class="single-day-forecast {{this.oddEvenClass @index}}">
+    <img src="{{this.iconUrl @singleDay.iconId}}" class="single-img"/>
+    <div class="real-date">{{this.returnDateFromTimestamp @singleDay.date}}</div>
+    <div class="day-desc">{{@singleDay.iconPhrase}}</div>
+    <div class="temps">{{this.getTemps @singleDay.minTemp @singleDay.maxTemp}}</div>
+</div>

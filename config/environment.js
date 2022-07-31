@@ -43,5 +43,6 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.ACCUWEATHER_APIKEY = 'oqBVZqzF5XBY47dh3bQ7xnQMQ7AyLWyL';
   return ENV;
 };
