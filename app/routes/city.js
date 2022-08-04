@@ -6,6 +6,7 @@ export default class CityRoute extends Route {
 
   async model(params) {
     try {
+      //Get city id
       const city = await this.store.queryRecord(
         'city',
         params.city_name ? params.city_name : 'Jerusalem'
